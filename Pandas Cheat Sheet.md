@@ -36,4 +36,5 @@
 | Convert string to date | `df['ColumnName'] = pd.to_datetime(df['ColumnName'], format='%d%m%Y'` specify your [date format](https://docs.python.org/3/library/datetime.html#strftime-and-strptime-format-codes) |
 | Boxplot with each variable in a subplot | `import matplotlib.pyplot as plt` `bp = df.plot.box(subplots=True)` `plt.show()` |
 | Save plot (example using boxplot) | `df.boxplot(column=['Duration']).get_figure().savefig('images/bp_duration.png')` |
-| Replace values in a data frame | `df['column_name_to_be_replaced'].mask(df['column_name'] == 'value_of_what_to_be_replaced', 'thing_to_be_replaced', inplace=True))` for example, `df_merged['NOC'].mask(df_merged['Country'] == 'Great Britain', 'GBR', inplace=True) `  would be to find Great Britain in the Country column to replace what's in its NOC column with GBR|
+| Replace values in a data frame | `df['column_name_to_be_replaced'].mask(df['column_name'] == 'value_of_what_to_be_replaced', 'thing_to_be_replaced', inplace=True))` for example, `df_merged['NOC'].mask(df_merged['Country'] == 'Great Britain', 'GBR', inplace=True)`  would be to find Great Britain in the Country column to replace what's in its NOC column with GBR|
+| Make a plot with titles | <pre><code>life_cities.plot(x = '', y = '') <br> plt.title('title') <br> plt.xlabel('x-axis title') <br> plt.ylabel('y-axis title')</pre></code>|
