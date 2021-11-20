@@ -38,4 +38,5 @@
 | Save plot (example using boxplot) | `df.boxplot(column=['Duration']).get_figure().savefig('images/bp_duration.png')` |
 | Replace values in a data frame | `df['column_name_to_be_replaced'].mask(df['column_name'] == 'value_of_what_to_be_replaced', 'thing_to_be_replaced', inplace=True))` for example, `df_merged['NOC'].mask(df_merged['Country'] == 'Great Britain', 'GBR', inplace=True)`  would be to find Great Britain in the Country column to replace what's in its NOC column with GBR|
 | Make a plot with titles | `life_cities.plot(x = '', y = '')  plt.title('title')  plt.xlabel('x-axis title')  plt.ylabel('y-axis title')`|
-|iloc | df.iloc[row_start:row_end , col_start, col_end] |
+| iloc | `df.iloc[row_start:row_end , col_start, col_end]` |
+| Removing the nth column to mth column | `df.drop(race.iloc[: , n:m ], axis = 1, inplace=True)` remember you can do -k to get the kth last column |
